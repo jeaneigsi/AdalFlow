@@ -49,7 +49,7 @@ GoogleGenAIClient = LazyImport(
 )
 LiteClient = LazyImport(
     "lightrag.components.model_client.lite_client.LiteClient",
-    OptionalPackages.LITE,
+    OptionalPackages.LITELLM,
 )
 OllamaClient = LazyImport(
     "lightrag.components.model_client.ollama_client.OllamaClient",
