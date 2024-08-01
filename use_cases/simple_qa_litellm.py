@@ -7,7 +7,7 @@ from lightrag.components.model_client import LiteClient
 from lightrag.utils import setup_env
 
 # Setup environment variables (e.g., API keys). Remove this in production.
-setup_env("C:/Users/jean\Documents/molo/LightRAG/.env")
+setup_env()
 
 
 class SimpleQA(Component):
