@@ -8,7 +8,7 @@ from lightrag.core.model_client import ModelClient
 from lightrag.core.types import ModelType, EmbedderOutput, Embedding
 
 # Conditional import of litellm
-litellm = safe_import(OptionalPackages.LITE.value[0], OptionalPackages.LITE.value[1])
+litellm = safe_import(OptionalPackages.LITELLM.value[0], OptionalPackages.LITELLM.value[1])
 
 from litellm import (
     get_supported_openai_params,
