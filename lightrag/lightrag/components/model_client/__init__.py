@@ -47,7 +47,7 @@ GoogleGenAIClient = LazyImport(
     "lightrag.components.model_client.google_client.GoogleGenAIClient",
     OptionalPackages.GOOGLE_GENERATIVEAI,
 )
-LiteClient = LazyImport(
+LiteLLMClient = LazyImport(
     "lightrag.components.model_client.lite_client.LiteClient",
     OptionalPackages.LITELLM,
 )
