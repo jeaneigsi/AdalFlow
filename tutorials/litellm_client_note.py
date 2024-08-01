@@ -17,7 +17,6 @@ from lightrag.core.types import ModelType
 from lightrag.utils import setup_env  # ensure you have .env with OPENAI_API_KEY
 
 setup_env(
-    "C:/Users/jean\Documents/molo/LightRAG/.env"
 )  # need to setup env, remove it in production or let's empty
 
 
