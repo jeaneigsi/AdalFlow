@@ -159,12 +159,15 @@ class LiteLLMClient(ModelClient):
         self, api_kwargs: Dict = {}, model_type: ModelType = ModelType.UNDEFINED
     ):
         """Asynchronous call to the API"""
-        import litellm
+        if "model" not in api_kwargs:
+            raise ValueError("model must be specified")
+        self._validate_environment(api_kwargs["model"])
+        log.info(f"api_kwargs: {api_kwargs}")
 
         if self.async_client is None:
             self.async_client = self.init_async_client()
         if model_type == ModelType.EMBEDDER:
-            return await litellm.aembedding(**api_kwargs)
+            return await self.async_client.aembedding(**api_kwargs)
         elif model_type == ModelType.LLM:
             return await self.async_client.acompletion(**api_kwargs)
         else:
