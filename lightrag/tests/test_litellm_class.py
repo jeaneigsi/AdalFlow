@@ -6,7 +6,7 @@ from lightrag.components.model_client.lite_client import LiteClient
 
 from lightrag.utils import setup_env  # ensure you have .env with OPENAI_API_KEY
 
-setup_env("C:/Users/jean\Documents/molo/LightRAG/.env")  # need to setup env
+ # need to setup env
 
 
 class test_lite_model(unittest.TestCase):
